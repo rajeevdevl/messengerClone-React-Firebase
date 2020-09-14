@@ -63,16 +63,12 @@ function App() {
       .then((willDelete) => {
         if (willDelete) {
           db.collection("messages").onSnapshot(snapshot => {
-            
+
             snapshot.docs.map(doc => {
               ref.doc(doc.id).delete()
                 .catch(error => {
                   console.log(error)
                 })
-
-              // setTimeout(() => {
-              //   window.location.reload();
-              // },3000)
 
             })
           })
