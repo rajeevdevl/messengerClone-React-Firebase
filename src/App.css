@@ -1,38 +1,43 @@
+
 .App {
   text-align: center;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* the input form and submit button where we type the message */
+.MuiSvgIcon-colorPrimary {
+  color: red !important;
+  /* margin-left: auto; */
+  position: absolute;
+  right: 10px;
+  margin:20px;
+}
+.app__form{
+  padding:10px;
+  position: fixed;
+  bottom:0px;
+  z-index:1;
+  background-color: #cfcfcf;
+  width:50%;
+  margin:10px;
+  border-radius: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.app_form__center{
+  display:flex;
+  justify-content: flex-end;
+}
+
+.app__formControl{
+  display: flex !important;  /*stopping material ui to override this*/
+  flex-direction : row !important;              
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .app__input{
+    flex:1;
   }
-  to {
-    transform: rotate(360deg);
+
+  .app__iconButton{
+    flex:0;
   }
-}
